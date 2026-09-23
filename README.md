@@ -175,7 +175,7 @@ pi_xgnn/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/pi-xgnn.git
+git clone https://github.com/uzzal2200/pi-xgnn-wind-turbine-rul.git
 cd pi-xgnn
 ```
 
