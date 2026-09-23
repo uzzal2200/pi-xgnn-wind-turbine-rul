@@ -55,24 +55,7 @@ The model combines three inductive biases:
   <img src="Figure/fig9_pixgnn_architecture.png" alt="PI-XGNN architecture" width="900">
 </p>
 
-The PI-XGNN pipeline is organised as follows:
 
-```mermaid
-flowchart LR
-    A[Raw bearing vibration signals] --> B[Preprocessing<br/>12 features, IRRMS, FPT, RUL labels]
-    B --> C[Sliding-window sequences]
-    C --> D[Adaptive Graph Encoder<br/>learnable threshold tau]
-    D --> E[Temporal Encoder<br/>stacked LSTM + multi-head attention]
-    E --> F[Latent degradation state h]
-    F --> G[SolutionNet F<br/>RUL prediction u-hat]
-    F --> H[DynamicsNet G<br/>physics dynamics]
-    G --> I[MC Dropout + z-star calibration<br/>probabilistic interval]
-    G --> J[Gradient-based node importance<br/>feature attribution]
-    G --> K[Data loss]
-    H --> L[PDE residual + monotonicity loss]
-    K --> M[PI-XGNN training objective]
-    L --> M
-```
 
 The model combines three inductive biases:
 
